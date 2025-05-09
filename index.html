@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>메이플스토리 구라벨 뽑기</title>
+  <title>아이템 뽑기 시뮬레이터</title>
   <style>
     html, body {
       height: 100%;
@@ -15,8 +15,10 @@
       flex-direction: column;
       align-items: center;
       padding: 20px;
+      box-sizing: border-box;
+      min-height: 100vh;
       background-image: url('https://w0.peakpx.com/wallpaper/430/818/HD-wallpaper-good-night-anime-anime-sky-clouds-cloudy-dark-dark-sky-moonlight-night-sky-sky-thumbnail.jpg');
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       background-attachment: fixed;
@@ -28,14 +30,25 @@
       padding: 10px 20px;
       border-radius: 10px;
       margin-bottom: 20px;
+      width: 100%;
+      max-width: 600px;
+      box-sizing: border-box;
+    }
+    main {
+      width: 100%;
+      max-width: 600px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      box-sizing: border-box;
     }
     #result { margin-top: 20px; font-size: 1.5rem; }
-    #history { margin-top: 20px; max-width: 400px; width: 100%; }
+    #history { margin-top: 20px; max-width: 100%; width: 100%; }
     .item { display: flex; align-items: center; margin: 5px 0; }
     .item img { width: 40px; height: 40px; margin-right: 10px; }
     button { padding: 10px 20px; font-size: 1rem; cursor: pointer; border-radius: 5px; }
     #counter { margin-top: 10px; font-weight: bold; }
-    .title-container { display: flex; align-items: center; gap: 10px; }
+    .title-container { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
     .title-container img.logo { width: 32px; height: 32px; }
     .badge-img { width: 32px; height: 32px; display: none; }
   </style>
